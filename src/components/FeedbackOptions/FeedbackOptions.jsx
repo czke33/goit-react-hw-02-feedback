@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import style from "./feedbackoptions.module.css"
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
+    return(<>
             <div className={style.feedbackcontainer}>
                 {options.map((option, index) => {
                     return (
@@ -15,7 +16,8 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
                     >{option}
                     </button></>)
                 })}
-            </div>
+        </div>
+        </>)
        
 };
 

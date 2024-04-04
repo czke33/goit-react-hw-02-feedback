@@ -15,13 +15,14 @@ export class App extends Component {
       bad: 0,
     };
   }
+ 
 
   countTotal= () => {
     return this.state.good + this.state.neutral + this.state.bad;
   };
 
   countPercentage = () => {
-    return Math.round((this.state.good / this.countTotalFeedback()) * 100);
+    return Math.round((this.state.good / this.countTotal) * 100);
   };
 
   handleFeedback = event => {
@@ -31,8 +32,8 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const total = this.countTotal();
-    const positiveFeedback = this.countPercentage();
+    const total = this.countTotal;
+    const positiveFeedback = this.countPercentage;
     return (
       <>
         <Section title="Please leave feedback">
