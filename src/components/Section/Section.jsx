@@ -5,9 +5,7 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions'
 const Section = () => {
   return (
     <>
-          <Statistics  good={ } neutral={ } bad={ } total={ } positivePercentage={ } />
-      <FeedbackOptions options={} onLeaveFeedback={}/>
-    </>
+           </>
   );
 };
 
