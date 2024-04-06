@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import style from "./statistics.module.css"
 
-function Statistics({ good, neutral, bad, total, positivePersentage }) {
+function Statistics({ good, neutral, bad, total, positivePercentage }) {
     return (
         <>
             <div className={style.statcontainer}>
@@ -11,7 +11,7 @@ function Statistics({ good, neutral, bad, total, positivePersentage }) {
                     <li>Neutral: {neutral}</li>
                     <li>Bad: {bad}</li>
                     <li>Total: {total}</li>
-                    <li> Positive feedback: {positivePersentage}%</li>
+                    <li> Positive feedback: {positivePercentage}%</li>
                 </ul>
             </div>
         </>);
@@ -23,7 +23,7 @@ Statistics.propTypes = {
         neutral: PropTypes.number.isRequired,
         bad: PropTypes.number.isRequired,
         total: PropTypes.number.isRequired,
-        positivePersentage: PropTypes.isRequired,
+        positivePercentage: PropTypes.number.isRequired,
     };
 
 export default Statistics;

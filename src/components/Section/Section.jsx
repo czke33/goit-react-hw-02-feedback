@@ -1,9 +1,10 @@
 
 import PropTypes from 'prop-types';
 import style from "./section.module.css"
+import React from 'react';
 
 
-const Section = ({title, children}) => {
+function Section({ title, children }) {
   return (
       <>
       <section className={style.feedback}>
