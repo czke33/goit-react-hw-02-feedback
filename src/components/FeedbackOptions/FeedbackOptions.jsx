@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import style from "./feedbackoptions.module.css"
+import React from'react';
 
 function FeedbackOptions({ options, onLeaveFeedback, state }) {
     const optionKeys = Object.keys(options)
@@ -9,7 +10,7 @@ function FeedbackOptions({ options, onLeaveFeedback, state }) {
             {optionKeys.map((option, index) => {
                     return (
                         <>
-    <li className={style.feedbackoptions} key={options.index}>
+                     <li className={style.feedbackoptions} key={index}>
                     <button
                         type="button"
                                     name={option}
