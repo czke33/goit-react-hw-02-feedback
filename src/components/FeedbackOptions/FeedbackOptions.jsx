@@ -10,18 +10,18 @@ function FeedbackOptions({ options, onLeaveFeedback}) {
             {optionKeys.map((option,index) => {
                 
                     return (
-                        <>
-                            <Fragment key={index}>
-                     <li className={style.feedbackoptions} >
-                    <button
-                                    type="button"
-                                    key={index}
-                                    name={option}
-                                    value={option}
-                        onClick={onLeaveFeedback}
-                        className={style.feedbackbtn}
-                    >{option}
-                    </button></li></Fragment></>)
+                    <li className={style.feedbackoptions} key={index}>
+            <button
+              type="button"
+              key={index}
+              name={option}
+              value={option}
+              onClick={onLeaveFeedback}
+              className={style.feedbackbtn}
+            >
+              {option}
+            </button>
+          </li>)
                 })}
         </div>
         </>)
@@ -32,7 +32,7 @@ function FeedbackOptions({ options, onLeaveFeedback}) {
 FeedbackOptions.propTypes = {
     options: PropTypes.object.isRequired,
     onLeaveFeedback: PropTypes.func.isRequired,
-    index: PropTypes.string.isRequired,
+   
 }
 
 export default FeedbackOptions;
